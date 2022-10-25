@@ -18,8 +18,7 @@ class Books {
       (bk) => `<li class="book">
   <p>${bk.title}</p>
    <p>${bk.author}</p>
-   <button class="btn btn-remove" data-id="${bk.id}">Remove</button>
-  </li>`
+   <button class="btn btn-remove" data-id="${bk.id}">Remove</button></li>`
     );
 
     this.booksListContainer.innerHTML = booksList;

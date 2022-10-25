@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
 }
 
@@ -10,27 +10,28 @@ h1,
 h2 {
   text-align: center;
 }
-.books-list,
-.form {
-  max-width: 500px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.books-list {
-  border: 1px solid #333;
-  list-style: none;
-}
-
-.books-list li:nth-child(odd){
-  background-color: #DDDDDD;
-}
 
 .books-list li {
   display: flex;
   align-items: center;
   gap: 10px;
   padding: 0 20px;
+}
+
+.books-list li:nth-child(odd) {
+  background-color: #ddd;
+}
+
+.books-list,
+.form {
+  margin: 0 auto;
+  padding: 10px;
+}
+
+.books-list {
+  border: 2px solid #ddd;
+  list-style: none;
+  max-width: 500px;
 }
 
 .btn-remove {
@@ -40,20 +41,29 @@ h2 {
 .form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   gap: 10px;
   max-width: 400px;
 }
 
-input{
+input {
   padding: 6px;
 }
 
-.btn{
-  padding: 4px;
+.btn {
+  padding: 2px 8px;
   cursor: pointer;
 }
 
-.btn-add{
+.btn-add {
   align-self: flex-end;
-  padding: 10px 6px;
+  padding: 6px 30px;
+}
+
+.divider {
+  height: 4px;
+  width: 100px;
+  background-color: #ddd;
+  margin-top: 30px;
+  border: none;
 }

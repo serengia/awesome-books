@@ -22,7 +22,8 @@
       }
     ],
     "linebreak-style": "off",
-    "quotes": ["warn", "double"]
+    "quotes": ["warn", "double"],
+    "comma-dangle": "off"
   },
   "ignorePatterns": ["dist/", "build/"]
 }
