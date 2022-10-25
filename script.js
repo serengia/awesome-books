@@ -19,7 +19,6 @@ class Books {
   <p>${bk.title}</p>
    <p>${bk.author}</p>
    <button class="btn btn-remove" data-id="${bk.id}">Remove</button>
-  <hr />
   </li>`
     );
 
@@ -38,7 +37,6 @@ class Books {
   <p>${bookObj.title}</p>
    <p>${bookObj.author}</p>
    <button class="btn btn-remove" data-id="${bookObj.id}">Remove</button>
-  <hr />
   </li>`;
 
     this.booksListContainer.insertAdjacentHTML("beforeend", listItem);
