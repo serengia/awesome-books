@@ -1,51 +1,40 @@
-![](https://img.shields.io/badge/Microverse-blueviolet)
+# Awesome Books
 
-# Project Name
-
-> Description the project.
+> This is a simple project that allow the user to added and/or remove books from a list. The data is persisted in the local storage.
 
 ## Built With
 
-- Major languages
-- Frameworks
-- Technologies used
+- Html
+- Css
+- JavaScript
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://serengia.github.io/awesome-books/)
 
 ## Getting Started
 
-**This is an example of how you may give instructions on setting up your project locally.**
-**Modify this file to match your project, remove sections that don't apply. For example: delete the testing section if the currect project doesn't require testing.**
-
 To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-### Setup
 
 ### Install
 
-### Usage
-
-### Run tests
-
-### Deployment
+```js
+npm install
+```
 
 ## Authors
 
 👤 **Author1**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/Alabi12)
+- Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/robert-alabi)
 
 👤 **Author2**
 
-- GitHub: [@githubhandle](https://github.com/githubhandle)
-- Twitter: [@twitterhandle](https://twitter.com/twitterhandle)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/linkedinhandle)
+- GitHub: [@githubhandle](https://github.com/serengia)
+- Twitter: [@twitterhandle](https://twitter.com/JamesSerengia)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/james-serengia)
 
 ## 🤝 Contributing
 
@@ -59,9 +48,7 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-- Hat tip to anyone whose code was used
-- Inspiration
-- etc
+- Hat tip to anyone who inspired this project
 
 ## 📝 License
 
