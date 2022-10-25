@@ -1,102 +1,77 @@
 const booksListContainer = document.querySelector(".books-list");
 const form = document.querySelector(".form");
 
-let removeButtons;
-let removeButtonsArr;
-let updatedArr = [];
+let books = [];
+if (localStorage.getItem("books")) {
+  books = JSON.parse(localStorage.getItem("books"));
+}
 
-let books = [
-  {
-    id: "1",
-    title: "book1",
-    author: "auth1",
-  },
-  {
-    id: "2",
-    title: "book2",
-    author: "auth2",
-  },
-  {
-    id: "3",
-    title: "book3",
-    author: "auth3",
-  },
-  {
-    id: "4",
-    title: "book4",
-    author: "auth4",
-  },
-];
+function loadItems(booksArr) {
+  const booksList = booksArr.map(
+    (bk) => `<li class="book">
+<p>${bk.title}</p>
+ <p>${bk.author}</p>
+ <button class="btn btn-remove" data-id="${bk.id}">Remove</button>
+<hr />
+</li>`
+  );
 
-const addBook = (formData) => {
+  booksListContainer.innerHTML = booksList;
+}
+
+loadItems(books);
+
+function appendBook(bookObj) {
+  const listItem = `<li class="book">
+<p>${bookObj.title}</p>
+ <p>${bookObj.author}</p>
+ <button class="btn btn-remove" data-id="${bookObj.id}">Remove</button>
+<hr />
+</li>`;
+
+  booksListContainer.insertAdjacentHTML("beforeend", listItem);
+}
+
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  const formData = {};
+  const title = e.target.title.value;
+  const author = e.target.author.value;
+
+  formData.title = title.trim();
+  formData.author = author.trim();
+  formData.id =
+    new Date().getTime().toString() + `${Math.trunc(Math.random() * 100)}`;
+
+  if (!title || !author) return;
+
+  //   Clear inputs
+  e.target.title.value = "";
+  e.target.author.value = "";
+
+  //   Add book
   books.push(formData);
 
-  injectList(books);
-};
+  //   Save to local storage
+  //   console.log(JSON.stringify(books));
+  localStorage.setItem("books", JSON.stringify(books));
 
-const removeBook = (id) => {
+  //   Append book UI
+  appendBook(formData);
+});
+
+booksListContainer.addEventListener("click", (e) => {
+  const clickedButton = e.target.closest(".btn-remove");
+
+  if (!clickedButton) return;
+
+  const { id } = clickedButton.dataset;
+
   books = books.filter((book) => book.id !== id);
 
-  console.log(JSON.stringify(books));
+  //   Save to local
+  localStorage.setItem("books", JSON.stringify(books));
 
-  injectList(books);
-};
-
-function injectList(passedArr) {
-  if (passedArr.length > 0) {
-    const listItems = books
-      .map(
-        (bk) => ` <li class="book">
-        <p>${bk.title}</p>
-         <p>${bk.author}</p>
-         <button class="btn btn-remove" data-id="${bk.id}">Remove</button>
-        <hr />
-</li>`
-      )
-      .join("");
-
-    // Inject to dom
-    booksListContainer.innerHTML = listItems;
-  }
-
-  eventListenerHandler();
-}
-
-injectList(books);
-
-const getAndDisplay = () => {
-  // Step 1: Get and prepare data
-  const formData = {};
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const formDataRow = new FormData(form);
-
-    for (const [key, value] of formDataRow) {
-      formData[key] = value;
-    }
-
-    formData.id =
-      new Date().getTime().toString() + `${Math.trunc(Math.random() * 1000)}`;
-
-    console.log(JSON.stringify(formData));
-
-    //   Step 2: Display
-    addBook(formData);
-  });
-};
-
-getAndDisplay();
-
-function eventListenerHandler() {
-  booksListContainer.addEventListener("click", (e) => {
-    const clickedButton = e.target.closest(".btn-remove");
-
-    if (!clickedButton) return;
-
-    const id = e.target.dataset.id;
-
-    removeBook(id);
-  });
-}
+  //   Load Items UI
+  loadItems(books);
+});

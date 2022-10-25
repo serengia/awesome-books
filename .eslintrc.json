@@ -20,7 +20,9 @@
         "js": "always",
         "json": "always"
       }
-    ]
+    ],
+    "linebreak-style": "off",
+    "quotes": ["warn", "double"]
   },
   "ignorePatterns": ["dist/", "build/"]
 }
