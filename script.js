@@ -13,7 +13,7 @@ function loadItems(booksArr) {
  <p>${bk.author}</p>
  <button class="btn btn-remove" data-id="${bk.id}">Remove</button>
 <hr />
-</li>`
+</li>`,
   );
 
   booksListContainer.innerHTML = booksList;
@@ -40,8 +40,7 @@ form.addEventListener("submit", (e) => {
 
   formData.title = title.trim();
   formData.author = author.trim();
-  formData.id =
-    new Date().getTime().toString() + `${Math.trunc(Math.random() * 100)}`;
+  formData.id = `${new Date().getTime().toString()}${Math.trunc(Math.random() * 100)}`;
 
   if (!title || !author) return;
 
