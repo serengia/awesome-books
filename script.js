@@ -62,7 +62,6 @@ class Books {
       this.books.push(formData);
 
       //   Save to local storage
-      //   console.log(JSON.stringify(books));
       localStorage.setItem("books", JSON.stringify(this.books));
 
       //   Append book UI
@@ -79,8 +78,6 @@ class Books {
       const { id } = clickedButton.dataset;
 
       this.books = this.books.filter((book) => book.id !== id);
-
-      //   console.log(this);
 
       //   Save to local
       localStorage.setItem("books", JSON.stringify(this.books));
