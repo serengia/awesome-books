@@ -1,9 +1,20 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 body {
   color: #333;
+  padding: 30px;
+  font-family: "Lato", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.row {
+  width: 80%;
+  margin: 0 auto;
 }
 
 h1,
@@ -11,11 +22,69 @@ h2 {
   text-align: center;
 }
 
+h1,
+h2,
+h3 {
+  margin-bottom: 10px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+
+  border: 2px solid #333;
+  padding: 20px;
+}
+
+.date {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.display-date {
+  margin-top: 10px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  margin-left: auto;
+}
+
+.nav-links a {
+  display: flex;
+  align-items: center;
+}
+.nav-links a:link,
+.nav-links a:visited {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  transition: all 0.2s;
+}
+.nav-links a:hover,
+.nav-links a:active {
+  color: #0a66c2;
+}
+
+.nav-list-icon {
+  margin-right: 4px;
+  font-size: 18px;
+}
+
+section {
+  padding: 40px 20px;
+}
+
 .books-list li {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 0 20px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
 }
 
 .books-list li:nth-child(odd) {
@@ -64,6 +133,22 @@ input {
   height: 4px;
   width: 100px;
   background-color: #ddd;
-  margin-top: 30px;
   border: none;
+  margin: 30px auto;
+}
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+
+.footer-container {
+  border: 2px solid #333;
+  padding: 20px;
+}
+
+.hide {
+  display: none;
 }
