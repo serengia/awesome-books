@@ -4,12 +4,20 @@
   margin: 0;
 }
 
+:root {
+  --color-primary: #0a66c2;
+  --color-grey: #333;
+}
+
+html {
+  font-size: 62.5%;
+}
+
 body {
-  color: #333;
-  padding: 30px;
+  color: var(--color-grey);
   font-family: "Lato", sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.8rem;
 }
 
 .row {
@@ -25,14 +33,32 @@ h2 {
 h1,
 h2,
 h3 {
-  margin-bottom: 10px;
+  margin-bottom: 1.4rem;
+}
+
+.header-top {
+  height: 8rem;
+  background-color: var(--color-primary);
+  display: flex;
+  align-items: center;
 }
 
 .nav {
   display: flex;
   align-items: center;
-  border: 2px solid #333;
-  padding: 20px;
+}
+
+.logo:link,
+.logo:visited {
+  color: #fff;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.logo:hover,
+.logo:active {
+  transform: scale(1.05);
 }
 
 .date {
@@ -41,14 +67,14 @@ h3 {
 }
 
 .display-date {
-  margin-top: 10px;
+  margin-top: 1rem;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
   align-items: center;
-  gap: 30px;
+  gap: 3rem;
   margin-left: auto;
 }
 
@@ -60,31 +86,34 @@ h3 {
 .nav-links a:link,
 .nav-links a:visited {
   text-decoration: none;
-  font-size: 16px;
-  color: #333;
+  font-size: 1.8rem;
+  color: rgb(217, 217, 217);
   transition: all 0.2s;
 }
 
 .nav-links a:hover,
 .nav-links a:active {
-  color: #0a66c2;
+  color: #fff;
 }
 
 .nav-list-icon {
   margin-right: 4px;
-  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+main {
+  min-height: calc(100vh - 20rem);
 }
 
 section {
-  padding: 40px 20px;
-  min-height: 400px;
+  padding: 4rem 2rem;
 }
 
 .books-list li {
   display: flex;
   align-items: center;
-  gap: 10px;
-  padding: 10px 20px;
+  gap: 1rem;
+  padding: 1rem 2rem;
   border: 1px solid #ddd;
 }
 
@@ -95,13 +124,13 @@ section {
 .books-list,
 .form {
   margin: 0 auto;
-  padding: 10px;
+  padding: 1rem;
 }
 
 .books-list {
   border: 2px solid #ddd;
   list-style: none;
-  max-width: 500px;
+  max-width: 50rem;
 }
 
 .btn-remove {
@@ -112,42 +141,65 @@ section {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  gap: 10px;
-  max-width: 400px;
+  gap: 1rem;
+  max-width: 40rem;
 }
 
 input {
-  padding: 6px;
+  padding: 0.6rem;
 }
 
 .btn {
-  padding: 2px 8px;
+  padding: 2px 0.8rem;
   cursor: pointer;
 }
 
 .btn-add {
   align-self: flex-end;
-  padding: 6px 30px;
+  padding: 0.6rem 3rem;
+}
+
+.author {
+  margin-top: 2rem;
+}
+
+.author a:link,
+.author a:visited {
+  text-decoration: none;
+  color: var(--color-primary);
+  transition: all 0.3s;
+}
+
+.author a:hover,
+.author a:active {
+  color: #04488d;
 }
 
 .divider {
-  height: 4px;
-  width: 100px;
+  height: 0.4rem;
+  width: 10rem;
   background-color: #ddd;
   border: none;
-  margin: 30px auto;
+  margin: 3rem auto;
 }
 
 .contact-container {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1rem;
   align-items: center;
 }
 
+.footer {
+  background-color: var(--color-primary);
+  height: 12rem;
+  color: #fff;
+}
+
 .footer-container {
-  border: 2px solid #333;
-  padding: 20px;
+  display: flex;
+  align-items: center;
+  height: 100%;
 }
 
 .hide {

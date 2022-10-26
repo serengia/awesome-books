@@ -19,36 +19,33 @@
 </head>
 
 <body>
-    <header>
-        <div class="row">
-            <nav class="nav nabar">
-                <span class="logo">Awesome Books</span>
+    <header class="header">
+        <div class="header-top">
+            <nav class="nav row">
+                <a href="#" class="logo">Awesome Books</a>
                 <ul class="nav-links">
                     <li class="nav-link"><a href="#list"><i
                                 class="nav-list-icon fa-solid fa-book-open-reader"></i>List</a></li>
-                    <li class="nav-link"><a href="#addnew"><i class="nav-list-icon fa-solid fa-plus"></i>Add New</a>
+                    <li class="nav-link"><a href="#about"><i
+                                class="nav-list-icon fa-regular fa-address-card"></i>About</a>
                     </li>
-                    <li class="nav-link"><a href="#contact"><i class="nav-list-icon fa-regular fa-address-card"></i>
+                    <li class="nav-link"><a href="#contact"><i class="nav-list-icon fa-solid fa-envelope"></i>
                             Contact</a></li>
                 </ul>
             </nav>
-            <div class="date">
-                <p class="display-date"></p>
-            </div>
+        </div>
 
+        <div class="date row">
+            <p class="display-date"></p>
         </div>
 
     </header>
     <main>
-        <section id="list" class="collection-section ">
+        <section id="list" class="collection-section tab">
             <div class="collection-container row">
                 <h1>All Awesome Books</h1>
                 <ul class="books-list"></ul>
             </div>
-
-
-        </section>
-        <section id="addnew" class="form-section hide">
             <div class="form-container row">
                 <hr class="divider">
                 <h2>Add a new book</h2>
@@ -60,10 +57,34 @@
             </div>
 
         </section>
-        <section id="contact" class="contact-section hide">
+
+        <section id="about" class="tab hide">
             <div class="row contact-container">
                 <div class="description">
-                    <h1>Contact Information</h1>
+                    <h2>About us</h2>
+                    <p>Do you have any question or you just want to say "hello"?</p>
+                    <p>You can reach out to us through;</p>
+                </div>
+                <div class="authors">
+                    <ul class="author">
+                        <li><a href="https://jamesserengia.com">jamesserengia.com</a> </li>
+                        <li>GitHub: <a href="https://github.com/serengia">visit &rarr;</a></li>
+                        <li>Nairobi - Kenya</li>
+                    </ul>
+                    <ul class="author">
+                        <li>Alabi</li>
+                        <li>GitHub: <a href="https://github.com/serengia">visit &rarr;</a></li>
+                        <li>Tel: +233-409-93320</li>
+                        <li>Accra-Ghana</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+        <section id="contact" class="contact-section tab hide">
+            <div class="row contact-container">
+                <div class="description">
+                    <h2>Contact Information</h2>
                     <p>Do you have any question or you just want to say "hello"?</p>
                     <p>You can reach out to us through;</p>
                 </div>
@@ -76,9 +97,8 @@
 
         </section>
     </main>
-    <footer>
+    <footer class="footer">
         <div class="footer-container row">
-
             <p>Copyright &copy;2022 Awesome Books</p>
         </div>
     </footer>

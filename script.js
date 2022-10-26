@@ -99,7 +99,7 @@ books.removeBook();
 // Show section dynamically
 const showSectionDynamically = () => {
   const navLinks = document.querySelector(".nav-links");
-  const allSections = document.querySelectorAll("section");
+  const allTabs = document.querySelectorAll(".tab");
 
   navLinks.addEventListener("click", (e) => {
     e.preventDefault();
@@ -108,7 +108,7 @@ const showSectionDynamically = () => {
 
     const id = clickedLink.getAttribute("href").replace("#", "");
 
-    [...allSections].forEach((sec) => {
+    [...allTabs].forEach((sec) => {
       sec.classList.add("hide");
     });
 
