@@ -14,12 +14,14 @@ class Books {
   }
 
   loadItems() {
-    const booksList = this.books.map(
-      (bk) => `<li class="book">
+    const booksList = this.books
+      .map(
+        (bk) => `<li class="book">
   <p>${bk.title}</p>
-   <p>${bk.author}</p>
+   <p> - By ${bk.author}</p>
    <button class="btn btn-remove" data-id="${bk.id}">Remove</button></li>`
-    );
+      )
+      .join("");
 
     this.booksListContainer.innerHTML = booksList;
   }
@@ -34,7 +36,7 @@ class Books {
   #appendBook(bookObj) {
     const listItem = `<li class="book">
   <p>${bookObj.title}</p>
-   <p>${bookObj.author}</p>
+   <p> - By ${bookObj.author}</p>
    <button class="btn btn-remove" data-id="${bookObj.id}">Remove</button>
   </li>`;
 
@@ -93,3 +95,43 @@ const books = new Books();
 books.loadItems();
 books.addBooks();
 books.removeBook();
+
+// Show section dynamically
+const showSectionDynamically = () => {
+  const navLinks = document.querySelector(".nav-links");
+  const allSections = document.querySelectorAll("section");
+
+  navLinks.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clickedLink = e.target.closest(".nav-link a");
+    if (!clickedLink) return;
+
+    const id = clickedLink.getAttribute("href").replace("#", "");
+
+    [...allSections].forEach((sec) => {
+      sec.classList.add("hide");
+    });
+
+    const elementToShow = document.getElementById(id);
+    elementToShow.classList.remove("hide");
+  });
+};
+
+showSectionDynamically();
+
+const insertDate = () => {
+  const dateEl = document.querySelector(".display-date");
+  const date = new Date();
+  const displayDate = date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  const displayTime = date.toLocaleTimeString();
+
+  const dateString = `${displayDate}, ${displayTime}`;
+
+  dateEl.innerHTML = dateString;
+};
+
+insertDate();
