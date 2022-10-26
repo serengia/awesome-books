@@ -97,34 +97,41 @@ books.addBooks();
 books.removeBook();
 
 // Show section dynamically
-const navLinks = document.querySelector(".nav-links");
-const allSections = document.querySelectorAll("section");
+const showSectionDynamically = () => {
+  const navLinks = document.querySelector(".nav-links");
+  const allSections = document.querySelectorAll("section");
 
-navLinks.addEventListener("click", (e) => {
-  e.preventDefault();
-  const clickedLink = e.target.closest(".nav-link a");
-  if (!clickedLink) return;
+  navLinks.addEventListener("click", (e) => {
+    e.preventDefault();
+    const clickedLink = e.target.closest(".nav-link a");
+    if (!clickedLink) return;
 
-  const id = clickedLink.getAttribute("href").replace("#", "");
+    const id = clickedLink.getAttribute("href").replace("#", "");
 
-  [...allSections].forEach((sec) => {
-    sec.classList.add("hide");
+    [...allSections].forEach((sec) => {
+      sec.classList.add("hide");
+    });
+
+    const elementToShow = document.getElementById(id);
+    elementToShow.classList.remove("hide");
   });
+};
 
-  const elementToShow = document.getElementById(id);
-  elementToShow.classList.remove("hide");
-});
+showSectionDynamically();
 
-const dateEl = document.querySelector(".display-date");
-const date = new Date();
-const displayDate = date.toLocaleDateString('en-US',{
-  month: 'long',day: 'numeric',year: 'numeric',
-})
-const displayTime = date.toLocaleTimeString();
+const insertDate = () => {
+  const dateEl = document.querySelector(".display-date");
+  const date = new Date();
+  const displayDate = date.toLocaleDateString("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  });
+  const displayTime = date.toLocaleTimeString();
 
-const dateString = displayDate + ', ' + displayTime
+  const dateString = `${displayDate}, ${displayTime}`;
 
-dateEl.innerHTML = dateString
+  dateEl.innerHTML = dateString;
+};
 
-
-console.log(displayDate);
+insertDate();
