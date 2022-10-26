@@ -134,4 +134,6 @@ const insertDate = () => {
   dateEl.innerHTML = dateString;
 };
 
-insertDate();
+setInterval(() => {
+  insertDate();
+}, 1000);
