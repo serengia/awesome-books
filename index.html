@@ -12,25 +12,44 @@
 
 <body>
     <header>
-        <h1>Awesome Books</h1>
+        <nav class="nav nabar">
+            <span class="logo">Awesome Books</span>
+            <ul>
+                <li><a href="#list">List</a></li>
+                <li><a href="#addnew">Add New</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="display-date">March, 2020</p>
     </header>
     <main>
         <section class="collection-section">
+            <h1>All Awesome Books</h1>
             <ul class="books-list"></ul>
         </section>
         <section class="form-section">
             <hr class="divider">
             <h2>Add a new book</h2>
-
             <form class="form">
                 <input aria-label="Author Title" type="text" placeholder="Title" name="title" />
                 <input aria-label="Author Input" type="text" placeholder="Author" name="author" />
                 <button type="submit" class="btn btn-add">Add</button>
             </form>
         </section>
-        <section class="contact-section"></section>
+        <section class="contact-section">
+            <h1>Contact Information</h1>
+            <p>Do you have any question or you just want to say "hello"?</p>
+            <p>You can reach out to us through;</p>
+            <ul>
+                <li>info@awesomebooks.com</li>
+                <li>Tel: +233-409-93320</li>
+                <li>Accra-Ghana</li>
+            </ul>
+        </section>
     </main>
-    <footer></footer>
+    <footer>
+        <p>Copyright &copy;2022 Awesome Books</p>
+    </footer>
 </body>
 
 </html>
