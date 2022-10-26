@@ -114,3 +114,17 @@ navLinks.addEventListener("click", (e) => {
   const elementToShow = document.getElementById(id);
   elementToShow.classList.remove("hide");
 });
+
+const dateEl = document.querySelector(".display-date");
+const date = new Date();
+const displayDate = date.toLocaleDateString('en-US',{
+  month: 'long',day: 'numeric',year: 'numeric',
+})
+const displayTime = date.toLocaleTimeString();
+
+const dateString = displayDate + ', ' + displayTime
+
+dateEl.innerHTML = dateString
+
+
+console.log(displayDate);
