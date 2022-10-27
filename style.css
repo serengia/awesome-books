@@ -87,13 +87,14 @@ h3 {
 .nav-links a:visited {
   text-decoration: none;
   font-size: 1.8rem;
-  color: rgb(217, 217, 217);
+  color: rgb(255, 255, 255);
   transition: all 0.2s;
+  border-bottom: 2px solid transparent;
 }
 
 .nav-links a:hover,
 .nav-links a:active {
-  color: #fff;
+  color: rgb(219, 219, 219);
 }
 
 .nav-list-icon {
@@ -204,6 +205,12 @@ input {
 
 .hide {
   display: none;
+}
+
+.highlight {
+  color: rgb(219, 219, 219) !important;
+  padding-bottom: 2px;
+  border-bottom: 2px solid rgb(219, 219, 219) !important;
 }
 
 @media (max-width: 600px) {

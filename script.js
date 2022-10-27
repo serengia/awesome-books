@@ -100,11 +100,15 @@ books.removeBook();
 const showSectionDynamically = () => {
   const navLinks = document.querySelector(".nav-links");
   const allTabs = document.querySelectorAll(".tab");
+  const allLinks = document.querySelectorAll(".nav-link a");
 
   navLinks.addEventListener("click", (e) => {
     e.preventDefault();
     const clickedLink = e.target.closest(".nav-link a");
     if (!clickedLink) return;
+
+    [...allLinks].forEach((link) => link.classList.remove("highlight"));
+    clickedLink.classList.add("highlight");
 
     const id = clickedLink.getAttribute("href").replace("#", "");
 
