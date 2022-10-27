@@ -24,13 +24,13 @@ npm install
 
 ## Authors
 
-👤 **Author1**
+👤 **Robert Alabi**
 
 - GitHub: [@githubhandle](https://github.com/Alabi12)
 - Twitter: [@twitterhandle](https://twitter.com/wolo_robert)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/robert-alabi)
 
-👤 **Author2**
+👤 **James Serengia**
 
 - GitHub: [@githubhandle](https://github.com/serengia)
 - Twitter: [@twitterhandle](https://twitter.com/JamesSerengia)

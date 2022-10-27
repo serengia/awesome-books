@@ -205,3 +205,13 @@ input {
 .hide {
   display: none;
 }
+
+@media (max-width: 600px) {
+  .logo {
+    display: none;
+  }
+
+  .nav-links {
+    width: 100%;
+  }
+}
