@@ -221,4 +221,12 @@ input {
   .nav-links {
     width: 100%;
   }
+
+  .row {
+    width: 95%;
+  }
+
+  .books-list li {
+    padding: 0.4rem;
+  }
 }
